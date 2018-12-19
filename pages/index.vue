@@ -78,7 +78,7 @@ section.hero {
   text-align: center;
   background: #1a53f0;
   img {
-    width: 100px;
+    width: 150px;
   }
   .hero-body {
     padding-top: 2rem;
@@ -114,6 +114,49 @@ section.link {
     margin-bottom: .75rem;
     font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
+  }
+}
+@media screen and (max-width: 840px) {
+  section.hero {
+    img {
+      width: 120px;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+    }
+  }
+  section.link {
+    h2.theme {
+      font-size: 1.8rem;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: .5rem;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  section.hero {
+    .hero-body {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    img {
+      width: 100px;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+    }
+  }
+  section.link {
+    padding: 2rem 1.5rem;
+    h2.theme {
+      font-size: 1.5rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
   }
 }
 </style>

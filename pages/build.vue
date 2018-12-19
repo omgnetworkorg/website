@@ -77,6 +77,14 @@
   font-family: 'Circular Std Book';
   padding-bottom: 2rem;
   font-size: 1.5rem;
+  @media screen and (max-width: 640px) {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  h2.title {
+    font-size: 1.5rem;
+  }
 }
 ul {
   margin-bottom: 3rem;

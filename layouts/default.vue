@@ -14,11 +14,12 @@
           </nuxt-link>
 
           <a
+            :aria-expanded="expandMenu"
+            :class="{ 'is-active': expandMenu }"
             role="button"
             class="navbar-burger burger"
             aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarHeader">
+            @click="expandMenu = !expandMenu">
             <span aria-hidden="true"/>
             <span aria-hidden="true"/>
             <span aria-hidden="true"/>
@@ -27,30 +28,26 @@
 
         <div
           id="navbarHeader"
+          :class="{ 'is-active': expandMenu }"
           class="navbar-menu">
-
+          <div class="navbar-start"/>
           <div class="navbar-end">
-
-            <!--
-            <nuxt-link
-              :to="item.to"
-              exact-active-class="is-active">
-              <b-icon :icon="item.icon"/> {{ item.title }}
-            </nuxt-link>
-             -->
             <nuxt-link
               to="/learn"
-              class="navbar-item">
+              class="navbar-item"
+              @click.native="expandMenu = false">
               LEARN
             </nuxt-link>
             <nuxt-link
               to="/build"
-              class="navbar-item">
+              class="navbar-item"
+              @click.native="expandMenu = false">
               BUILD
             </nuxt-link>
             <nuxt-link
               to="/contribute"
-              class="navbar-item">
+              class="navbar-item"
+              @click.native="expandMenu = false">
               CONTRIBUTE
             </nuxt-link>
           </div>
@@ -72,6 +69,7 @@ export default {
   },
   data() {
     return {
+      expandMenu: false,
       items: [
         { title: 'Home', icon: 'home', to: { name: 'index' } },
         { title: 'Inspire', icon: 'lightbulb', to: { name: 'inspire' } }

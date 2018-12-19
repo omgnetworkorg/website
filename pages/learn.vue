@@ -40,8 +40,12 @@
   .subtitle {
     margin-bottom: 3rem;
   }
+  .button {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
   .button.is-info {
-    margin-right: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 .resources {

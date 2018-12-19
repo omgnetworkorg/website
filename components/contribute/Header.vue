@@ -8,8 +8,8 @@
           <li :class="{'is-active': $route.path === '/contribute'}">
             <nuxt-link to="/contribute">GROUPS</nuxt-link>
           </li>
-          <li :class="{'is-active': $route.path === '/contribute/reports'}">
-            <nuxt-link to="/contribute/reports">COMMUNITY REPORTS</nuxt-link>
+          <li :class="{'is-active': $route.path === '/contribute/updates'}">
+            <nuxt-link to="/contribute/updates">UPDATES</nuxt-link>
           </li>
           <li :class="{'is-active': $route.path === '/contribute/contributors'}">
             <nuxt-link to="/contribute/contributors">CONTRIBUTORS</nuxt-link>
@@ -25,8 +25,14 @@
   padding-top: 2rem;
   font-family: 'Circular Std Book';
   font-size: 1.5rem;
+  @media screen and (max-width: 640px) {
+    font-size: 1.25rem;
+  }
 }
 div.tabs {
   margin-bottom: 2rem;
+  @media screen and (max-width: 640px) {
+    font-size: .75rem;
+  }
 }
 </style>
