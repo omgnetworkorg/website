@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{163:function(e,t,n){"use strict";n.r(t);var i={layout:"empty"},l=n(14),o=Object(l.a)(i,function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("OMG Network")])},[],!1,null,null,null);o.options.__file="index.vue";t.default=o.exports}}]);
