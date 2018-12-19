@@ -1,5 +1,5 @@
 <template>
-  <section class="mission">
+  <section class="section mission">
     <div class="container">
 
       <h2 class="title">Our mission</h2>
@@ -19,7 +19,7 @@
   padding-bottom: 3rem;
   background: #f6f6f6;
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   p {
     font-size: 1rem;

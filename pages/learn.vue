@@ -1,25 +1,25 @@
 <template>
   <div class="container">
     <section class="section has-text-centered	get-started">
-      <h2 class="subtitle">
+      <div class="subtitle">
         <strong>Get started</strong> with a non-technical introduction : the OMG Network Guide.
-      </h2>
+      </div>
       <a
         href="/guide"
-        class="button is-info"
+        class="button is-large is-info"
         target="_blank">
         📘 Read the Guide
       </a>
       <a
         href="/guide/contribute.html"
-        class="button"
+        class="button is-large"
         target="_blank">
         👉 Contribute
       </a>
     </section>
 
     <section class="section resources">
-      <h1 class="title">Education resources</h1>
+      <h1 class="title">External resources</h1>
       <ul>
         <li>
           <a
@@ -45,6 +45,9 @@
   }
 }
 .resources {
+  .title {
+    font-size: 2rem;
+  }
   li a {
     font-weight: bold;
     color: inherit;

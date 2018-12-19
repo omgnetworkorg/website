@@ -3,9 +3,7 @@
     <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            OMGNETWORK.ORG
-          </h1>
+          <img src="@/assets/images/logo.png">
           <h2 class="subtitle">
             Decentralized and open source finance solution
           </h2>
@@ -17,10 +15,10 @@
       class="section link"
       @click="$router.push('/learn')">
       <div class="container">
-        <h2 class="lbl">LEARN</h2>
-        <h2 class="subtitle">
+        <h2 class="theme">LEARN</h2>
+        <div class="subtitle">
           Educate yourself on the OMG Network components. 🎓
-        </h2>
+        </div>
         <nuxt-link
           to="/learn"
           class="learn-more">
@@ -33,10 +31,10 @@
       class="section link has-text-right"
       @click="$router.push('/build')">
       <div class="container">
-        <h2 class="lbl">BUILD</h2>
-        <h2 class="subtitle">
+        <h2 class="theme">BUILD</h2>
+        <div class="subtitle">
           🔧 Developers, explore the (open) source code and start tinkering.
-        </h2>
+        </div>
         <nuxt-link
           to="/build"
           class="learn-more">
@@ -48,10 +46,10 @@
       class="section link"
       @click="$router.push('/contribute')">
       <div class="container">
-        <h2 class="lbl">CONTRIBUTE</h2>
-        <h2 class="subtitle">
+        <h2 class="theme">CONTRIBUTE</h2>
+        <div class="subtitle">
           Join our community to make the OMG Network thrive. 🤘
-        </h2>
+        </div>
         <nuxt-link
           to="/contribute"
           class="learn-more">
@@ -78,11 +76,27 @@ export default {
 <style lang="scss" scoped>
 section.hero {
   text-align: center;
+  background: #1a53f0;
+  img {
+    width: 100px;
+  }
+  .hero-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .subtitle {
+    color: rgba(255, 255, 255, .6);
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    font-family: 'Circular Std Book Italic', sans-serif;
+  }
 }
 section.link {
   font-family: 'Open sans', sans-serif;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-bottom: 1px solid #eee;
   cursor: pointer;
   &:hover .learn-more {
@@ -92,12 +106,14 @@ section.link {
     font-size: .75rem;
     color: inherit;
   }
-}
-h2.lbl {
-  margin-bottom: .75rem;
-}
-h2.subtitle {
-  margin-bottom: .75rem;
-  font-size: 1.5rem;
+  h2.theme {
+    font-size: 2.2rem;
+    margin-bottom: .25rem;
+  }
+  .subtitle {
+    margin-bottom: .75rem;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+  }
 }
 </style>

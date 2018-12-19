@@ -3,11 +3,30 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+a {
+  color: #1a53f0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Circular Std Black';
+}
 
 .lbl {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Circular Std Book';
   display: inline-block;
-  padding: .3rem .8rem;
-  background: #2B2B2B;
+  padding: .25rem .7rem;
+  background: #1a53f0;
   color: #fff;
+  letter-spacing: .03rem;
+}
+
+section.no-padding-v {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// this should go in bulma variables customization
+.tabs li.is-active a {
+  border-bottom-color: #1a53f0;
+  color: #1a53f0;
 }

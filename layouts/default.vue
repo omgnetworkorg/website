@@ -10,10 +10,7 @@
           <nuxt-link
             class="navbar-item"
             to="/">
-            <img
-              src="https://bulma.io/images/bulma-logo.png"
-              width="112"
-              height="28">
+            <img src="@/assets/images/logo.png">
           </nuxt-link>
 
           <a
@@ -86,11 +83,17 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  background: #2B2B2B;
+  background: #1a53f0;
+}
+.navbar.is-dark .navbar-brand .navbar-item:hover {
+  background: transparent;
+}
+.navbar.is-dark a.navbar-item:hover {
+  background-color: transparent;
 }
 .navbar-end .navbar-item {
-  font-family: 'Raleway', sans-serif;
-  font-size: .8rem;
+  font-family: 'Std Circular Black', sans-serif;
+  font-size: .85rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   &.nuxt-link-active {

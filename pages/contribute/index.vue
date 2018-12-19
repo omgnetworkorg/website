@@ -2,10 +2,10 @@
   <div>
     <ContributeHeader/>
 
-    <section class="section groups">
+    <section class="section groups no-padding-v">
       <div class="container">
 
-        <h2 class="subtitle">We have entry points for various themes, and anyone is free to join a group at any time :</h2>
+        <div class="subtitle">We have entry points for various themes, and anyone is free to join a group at any time :</div>
 
         <div class="group">
           <h3 class="lbl">Core</h3>
@@ -81,8 +81,8 @@ export default {
 <style lang="scss" scoped>
 .groups {
   .subtitle {
-    font-style: italic;
     margin-bottom: .5rem;
+    font-family: 'Circular Std Book Italic';
   }
 }
 .group {
@@ -93,6 +93,7 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: .75rem;
+    font-size: .9rem;
   }
   .learn-more {
     font-size: .75rem;
