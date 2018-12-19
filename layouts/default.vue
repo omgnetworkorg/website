@@ -1,54 +1,78 @@
 <template>
   <div>
+
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar is-fixed-top is-dark"
       role="navigation"
       aria-label="main navigation">
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/">
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28">
-        </a>
+      <div class="container">
+        <div class="navbar-brand">
+          <nuxt-link
+            class="navbar-item"
+            to="/">
+            <img
+              src="https://bulma.io/images/bulma-logo.png"
+              width="112"
+              height="28">
+          </nuxt-link>
 
-        <div class="navbar-burger">
-          <span/>
-          <span/>
-          <span/>
+          <a
+            role="button"
+            class="navbar-burger burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarHeader">
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+          </a>
         </div>
-      </div>
-    </nav>
 
-    <section class="main-content columns">
+        <div
+          id="navbarHeader"
+          class="navbar-menu">
 
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">General</p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key">
+          <div class="navbar-end">
+
+            <!--
             <nuxt-link
               :to="item.to"
               exact-active-class="is-active">
               <b-icon :icon="item.icon"/> {{ item.title }}
             </nuxt-link>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <nuxt />
+             -->
+            <nuxt-link
+              to="/learn"
+              class="navbar-item">
+              LEARN
+            </nuxt-link>
+            <nuxt-link
+              to="/build"
+              class="navbar-item">
+              BUILD
+            </nuxt-link>
+            <nuxt-link
+              to="/contribute"
+              class="navbar-item">
+              CONTRIBUTE
+            </nuxt-link>
+          </div>
+        </div>
       </div>
+    </nav>
 
-    </section>
+    <nuxt />
+
   </div>
 </template>
 
 <script>
 export default {
+  head: {
+    bodyAttrs: {
+      class: 'has-navbar-fixed-top'
+    }
+  },
   data() {
     return {
       items: [
@@ -59,3 +83,19 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.navbar {
+  background: #2B2B2B;
+}
+.navbar-end .navbar-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: .8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  &.nuxt-link-active {
+    border-bottom: 3px solid #fff;
+    padding-top: 11px;
+  }
+}
+</style>
